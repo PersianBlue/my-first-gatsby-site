@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from '../components/App'
+import Layout from "../components/layout"
 import {useState} from 'react'
+
 
 const Feedback= () =>{
     const[good, setGood] = useState(0);
@@ -53,18 +54,20 @@ const Feedback= () =>{
 
     return (
         <div>
+            <Layout>
             <h1> Give Feedback here:</h1>
             <button onClick = {()=> controller("good")} text = "good"> Good </button>
             <button onClick = {()=>controller("neutral")} text = "neutral">Neutral </button>
             <button onClick = {()=>controller("bad")} text = "bad">Bad </button>
-            <h2>Feedback statistics</h2>
             <br></br>
+            <h2>Feedback statistics</h2>
             <p>Good: {good}</p>
             <p>Neutral: {neutral}</p>
             <p>Bad: {bad}</p>
-            <p> {count}</p>
+            <p>Responses count: {count}</p>
             <p>Average: {avg}</p>
-            <p>Positivity rate: {positivity}</p>
+            <p>Positivity rate: {positivity}%</p>
+            </Layout>
         </div>
     )
 
