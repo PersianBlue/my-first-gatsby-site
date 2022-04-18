@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 let link1 = "https://fullstackopen.com/"
 let link2 = "https://www.gatsbyjs.com/docs/tutorial/part-2/"
