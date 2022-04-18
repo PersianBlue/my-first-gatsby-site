@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import App from './App'
+import App from '../components/App'
+import ButtonMaster from '../components/ButtonMaster'
 
 let counter = 1;
 
-const updateCounter = () =>{
+/*const updateCounter = () =>{
   counter +=1;
 }
 const refresh = () =>{
@@ -12,18 +13,19 @@ const refresh = () =>{
     <div>
       <p>I'm calling my refresh function</p>
       <App counter = {counter}/>
-      {/*updateCounter()*/}
+      {updateCounter()}
     </div>
   )
-}
+}*/
 
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <p>I am making this by following the Gatsby Tutorial.</p>
+      <p>Hey guys, welcome back to my Youtube channel!</p>
       <App counter = {counter}/>
-      {/*refresh()*/}
+      <ButtonMaster />
+      
     </Layout>
   )
 }
