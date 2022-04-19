@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from "../components/layout"
 import {useState} from 'react'
+import { Statistics } from '../components/Statistics'
+import { Button } from '../components/Button'
 
 
 const Feedback= () =>{
@@ -28,7 +30,9 @@ const Feedback= () =>{
     }
 
     const calcAverage = () =>{
-        const average = (good - bad)/count
+        let average = (good - bad)/count
+        average = Math.round(100*average)
+        average = average/100
         //onsole.log(average,good,bad,count);
         return setAverage(average);
     }
@@ -56,17 +60,14 @@ const Feedback= () =>{
         <div>
             <Layout>
             <h1> Give Feedback here:</h1>
-            <button onClick = {()=> controller("good")} text = "good"> Good </button>
-            <button onClick = {()=>controller("neutral")} text = "neutral">Neutral </button>
-            <button onClick = {()=>controller("bad")} text = "bad">Bad </button>
+            <Button  color = "green" onClick = {()=> controller("good")} text = "good"/>
+            <Button color = "blue" onClick = {()=>controller("neutral")} text = "neutral"/>
+            <Button color = "red" onClick = {()=>controller("bad")} text = "bad"/>
+ 
             <br></br>
-            <h2>Feedback statistics</h2>
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Responses count: {count}</p>
-            <p>Average: {avg}</p>
-            <p>Positivity rate: {positivity}%</p>
+          
+            <Statistics  good = {good} neutral= {neutral} bad = {bad} count = {count} avg = {avg} positivity = {positivity}/>
+
             </Layout>
         </div>
     )
