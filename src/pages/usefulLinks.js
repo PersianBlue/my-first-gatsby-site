@@ -8,6 +8,7 @@ let link4 = "http://reactjs.org/tutorial"
 let link5 = "https://github.com/PersianBlue/my-first-gatsby-site"
 let link6 = "https://reactjs.org/docs/state-and-lifecycle.html"
 let link7 = "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics"
+let link8 = "https://overreacted.io/a-complete-guide-to-useeffect/";
 
 const links = [
     {id: 0, link: link1, name: "Full Stack Open Tutorial"},
@@ -16,7 +17,8 @@ const links = [
     {id: 3, link: link4, name: "Reactjs.org tutorial"},
     {id: 4, link: link5, name: "Github Link for this code"},
     {id: 5, link: link6, name: "React docs on state and lifecycle"},
-    {id: 6, link: link7, name: "HTML Docs on Tables and styling tables"}
+    {id: 6, link: link7, name: "HTML Docs on Tables and styling tables"},
+    {id: 7, link: link8, name: "Complete guide to useEffect"}
 
 ]
 const displayElement = (element) => (
