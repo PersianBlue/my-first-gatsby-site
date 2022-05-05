@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Lobster,monospace;
+  src: url(https://fonts.googleapis.com/css?family=Lobster);
+}
+
 .container {
     margin: auto;
     max-width: 500px;
@@ -10,21 +15,39 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    background-color: rgb(146, 107, 185,0.65);
   }
   .nav-link-item {
     padding-right: 2rem;
   }
   .nav-link-text {
     color: black;
+
+  }
+  .nav-link-text:hover{
+    box-shadow: 1px 1px 3px 1.5px yellow;
+
+  }
+
+  .nav-links:hover{
+    background-color: rgba(105, 52, 158, 0.603);
   }
 
   .button{
     border: none;
     color: white;
+    margin: 2.5px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 12px;
+    box-shadow: 2px 1px 3px 2px black;
+    position:relative;
   }
+  .button:hover{
+    box-shadow: 2px 1px 3px 2px yellow;
+  }
+
+  

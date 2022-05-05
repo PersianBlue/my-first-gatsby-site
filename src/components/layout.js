@@ -7,6 +7,8 @@ import {
   navLinkItem,
   navLinkText
 } from './layout.module.css'
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"></link>
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>

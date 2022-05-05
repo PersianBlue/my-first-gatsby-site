@@ -35,7 +35,7 @@ export const Statistics = ({good,neutral,bad,count,avg,positivity}) => {
         return (
             <div>
                 <h2>Feedback statistics</h2>
-                <p>Good: {}</p>
+                <p>Good: {good}</p>
                 <p>Neutral: {neutral}</p>
                 <p>Bad: {bad}</p>
                 <p>Responses count: {count}</p>

@@ -9,6 +9,12 @@ let link5 = "https://github.com/PersianBlue/my-first-gatsby-site"
 let link6 = "https://reactjs.org/docs/state-and-lifecycle.html"
 let link7 = "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics"
 let link8 = "https://overreacted.io/a-complete-guide-to-useeffect/";
+let link9 = "https://www.pluralsight.com/guides/how-to-pass-props-object-from-child-component-to-parent-component";
+let link10 = "https://www.youtube.com/watch?v=NMiEREulVLc&ab_channel=Academind";
+let link11 = "https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer";
+let link12 = "https://github.com/cloudcommunity/Free-Certifications"
+let link13 = "https://twitter.com/catalinmpit/status/1519303615608934401"
+let link14 = "https://www.freecodecamp.org/learn/responsive-web-design/"
 
 const links = [
     {id: 0, link: link1, name: "Full Stack Open Tutorial"},
@@ -18,7 +24,13 @@ const links = [
     {id: 4, link: link5, name: "Github Link for this code"},
     {id: 5, link: link6, name: "React docs on state and lifecycle"},
     {id: 6, link: link7, name: "HTML Docs on Tables and styling tables"},
-    {id: 7, link: link8, name: "Complete guide to useEffect"}
+    {id: 7, link: link8, name: "Complete guide to useEffect"},
+    {id: 8, link: link9, name: "Pass props from child to parent"},
+    {id: 9, link: link10, name: "Styling techniques in Reactjs"},
+    {id: 10, link: link11, name: "Front-End Developer Course - Mozilla"},
+    {id: 11, link: link12, name: "Free cloud certifications"},
+    {id: 12, link: link13, name: "Github interview prep repos"},
+    {id: 13, link: link14, name: "Responsive web design - freeCodeCamp"}
 
 ]
 const displayElement = (element) => (

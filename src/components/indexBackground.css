@@ -1,0 +1,5 @@
+main{
+    backdrop-filter: contrast(1.23);
+    background-blend-mode: lighten;
+    background: linear-gradient(rgb(192, 181, 181),grey),url("./noise.svg");
+  }

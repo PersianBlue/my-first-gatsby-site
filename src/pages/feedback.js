@@ -6,10 +6,10 @@ import { Button } from '../components/Button'
 
 
 const Feedback= () =>{
-    const[good, setGood] = useState(0);
+    const [good, setGood] = useState(0);
     const [neutral, setNeutral] = useState(0);
     const [bad, setBad] = useState(0);
-    const[count, setCounter] = useState(0);
+    const [count, setCounter] = useState(0);
     const [avg, setAverage] = useState(0);
     const [positivity, setPos] = useState(0);
 
@@ -43,16 +43,12 @@ const Feedback= () =>{
             case "good":
                 //console.log("GOOD");
                 return setGood(good +1)
-                break;
             case 'neutral':
                 return setNeutral(neutral +1);
-                break;
             case "bad":
                 return setBad(bad +1);
-                break;
             default: return null;
         }
-        return;
 
     }
 
@@ -60,9 +56,12 @@ const Feedback= () =>{
         <div>
             <Layout>
             <h1> Give Feedback here:</h1>
-            <Button  color = "green" onClick = {()=> controller("good")} text = "good"/>
-            <Button color = "blue" onClick = {()=>controller("neutral")} text = "neutral"/>
-            <Button color = "red" onClick = {()=>controller("bad")} text = "bad"/>
+            <div style = {{display: "inline-block"}}>
+                <Button color = "green" onClick = {()=> controller("good")} text = "good"/>
+                <Button color = "blue" onClick = {()=>controller("neutral")} text = "neutral"/>
+                <Button color = "red" onClick = {()=>controller("bad")} text = "bad"/>
+            </div>
+            
  
             <br></br>
           

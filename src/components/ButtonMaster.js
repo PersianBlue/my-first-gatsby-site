@@ -1,6 +1,7 @@
 import React from 'react'
-//import Button from './App'
+import Button from "./Button"
 import {useState} from 'react'
+import "./buttonMasterCss.css"
 
 const History = (props) =>{
     if (props.allClicks.length ===0){
@@ -48,8 +49,8 @@ const ButtonMaster = () =>{
    <div>
        <p>Now we experiment with managing complex state, and keeping track of two buttons</p>
        <p>Left {left} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right {right}</p>
-        <button onClick ={handleLeftClick}> Left </button>
-        <button onClick = {handleRightClick}> Right </button>
+        <Button id = "left" color = "orange" onClick ={handleLeftClick} text="Left"/>  
+        <Button id = "right" color = "black" onClick = {handleRightClick} text="Right"/>  
         <h3>Below, we maintain the history of clicks thus far</h3>
         <History allClicks = {allClicks}/>
     </div>)

@@ -1,0 +1,18 @@
+#left:active{
+    animation: leftMovers 2s; 
+}
+
+@keyframes leftMovers{
+    from{ left: -8px;}
+    to {left: 0px;}
+
+}
+
+@keyframes rightMovers{
+    from{ right: -8px;}
+    to {right: 0px;}
+}
+
+#right:active{
+    animation: rightMovers 2s;
+}
