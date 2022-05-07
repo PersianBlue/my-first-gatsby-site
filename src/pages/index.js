@@ -8,10 +8,6 @@ import ReactAudioPlayer from "react-audio-player";
 
 let counter = 1;
 
-const playAudio = () => {
-  var audio = new Audio(TurnYourEyes);
-  audio.play();
-};
 
 const IndexPage = () => {
   return (
@@ -19,7 +15,7 @@ const IndexPage = () => {
       <p>Hey guys, welcome back to my Youtube channel!</p>
       <App counter={counter} />
       <ButtonMaster />
-      <ReactAudioPlayer src={TurnYourEyes} autoPlay controls />
+      <ReactAudioPlayer src={TurnYourEyes} controls volume={0.5} autoPlay />
     </Layout>
   );
 };
