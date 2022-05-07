@@ -1,5 +1,5 @@
 import React from 'react';
-import { button } from "../components/layout.module.css";
+import { button } from "../components/button.module.css";
 
 export const Button = ({ onClick, text, color,id }) => {
     return (
