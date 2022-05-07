@@ -28,7 +28,7 @@ const analytics = getAnalytics(app);
 const loginPage = ()=>{
     return(
         <>
-        <Layout>
+        <Layout pageTitle = "Login Page">
         <h1> This is me login page </h1>
         <Form/> 
         </Layout>

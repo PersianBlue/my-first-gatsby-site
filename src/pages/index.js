@@ -3,28 +3,23 @@ import Layout from "../components/layout";
 import App from "../components/App";
 import ButtonMaster from "../components/ButtonMaster";
 import "../components/indexBackground.css";
+import TurnYourEyes from "../assets/audio/TurnYourEyes.mp3";
+import ReactAudioPlayer from "react-audio-player";
 
 let counter = 1;
+
+const playAudio = () => {
+  var audio = new Audio(TurnYourEyes);
+  audio.play();
+};
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <body>
-        <p>Hey guys, welcome back to my Youtube channel!</p>
-        <App counter={counter} />
-        <ButtonMaster />
-        <video width="320" height="240" controls>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/L57ox0iQU7A"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </video>
-      </body>
+      <p>Hey guys, welcome back to my Youtube channel!</p>
+      <App counter={counter} />
+      <ButtonMaster />
+      <ReactAudioPlayer src={TurnYourEyes} autoPlay controls />
     </Layout>
   );
 };

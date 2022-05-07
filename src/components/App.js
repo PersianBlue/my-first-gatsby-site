@@ -36,9 +36,9 @@ const App = (props) => {
             <Display counter = {counter}/>
             <p>Try clicking the buttons!</p>
             <p></p>
-            <Button color = "green" onClick = {increaseByOne} text ="increase" />
-            <Button color = "blue" onClick ={setToZero} text = "reset"/>
-            <Button color = "red" onClick = {decreaseByOne} text = "decrease"/>
+            <Button  id ="increase" color = "green" onClick = {increaseByOne} text ="increase" />
+            <Button  id = "reset" color = "blue" onClick ={setToZero} text = "reset"/>
+            <Button  id = "decrease" color = "red" onClick = {decreaseByOne} text = "decrease"/>
             <p>This next number below will keep growing because I am mastering state</p>
             <p style ={{color: paraColor}}>The number is: {stateVariable}</p>
         </div>

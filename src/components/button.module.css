@@ -1,5 +1,7 @@
 .button{
     border: none;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
     color: white;
     margin: 2.5px;
     padding: 15px 32px;
