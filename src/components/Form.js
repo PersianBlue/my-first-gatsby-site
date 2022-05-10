@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SignupForm from "./SignupForm"
+import SignupFormSuccess from './SignupFormSuccess';
+
 
 const Form = () => {
+    const [formIsSubmitted, setFormIsSubmitted] =useState(false);
+
+    const submitForm = () =>{
+        setFormIsSubmitted(true);
+    }
     return (
         <div>
-            <SignupForm/>
+            {!formIsSubmitted ? <SignupForm submitForm = {submitForm}/> : <SignupFormSuccess/> }
             
         </div>
     );

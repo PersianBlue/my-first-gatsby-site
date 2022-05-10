@@ -15,6 +15,7 @@ let link11 = "https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_devel
 let link12 = "https://github.com/cloudcommunity/Free-Certifications"
 let link13 = "https://twitter.com/catalinmpit/status/1519303615608934401"
 let link14 = "https://www.freecodecamp.org/learn/responsive-web-design/"
+let link15 = "https://www.easeout.co/blog/2021-01-19-understanding-events/"
 
 const links = [
     {id: 0, link: link1, name: "Full Stack Open Tutorial"},
@@ -30,7 +31,8 @@ const links = [
     {id: 10, link: link11, name: "Front-End Developer Course - Mozilla"},
     {id: 11, link: link12, name: "Free cloud certifications"},
     {id: 12, link: link13, name: "Github interview prep repos"},
-    {id: 13, link: link14, name: "Responsive web design - freeCodeCamp"}
+    {id: 13, link: link14, name: "Responsive web design - freeCodeCamp"},
+    {id: 14, link: link15, name: "Events in JavaScript"},
 
 ]
 const displayElement = (element) => (
