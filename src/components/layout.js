@@ -9,43 +9,46 @@ import {
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
+  const pages = [
+    {
+      location: "/",
+      text: "Home",
+    },
+    {
+      location: "/about",
+      text: "About",
+    },
+    {
+      location: "/usefulLinks",
+      text: "Useful Links",
+    },
+    {
+      location: "/feedback",
+      text: "Feedback project",
+    },
+    {
+      location: "/loginPage",
+      text: "Login Page",
+    },
+    {
+      location: "/anecdotes",
+      text: "Anecdotes",
+    },
+  ];
   return (
     <div className={container}>
       <title>{pageTitle}</title>
       <nav>
         <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/usefulLinks" className={navLinkText}>
-              Useful Links
-            </Link>
-          </li>
-
-          <li className={navLinkItem}>
-            <Link to="/feedback" className={navLinkText}>
-              {" "}
-              Feedback project
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/loginPage" className={navLinkText}>
-              Login Page{" "}
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/anecdotes" className={navLinkText}>
-              Anecdotes
-            </Link>
-          </li>
+          {pages.map((page) => {
+            return (
+              <li className={navLinkItem}>
+                <Link to={page.location} className={navLinkText}>
+                  {page.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <main>
