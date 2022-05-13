@@ -14,7 +14,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "firebase": "^9.8.0",
+    "firebase": "^9.8.1",
+    "firebaseui": "^6.0.1",
     "gatsby": "^4.13.1",
     "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-sharp": "^4.13.0",

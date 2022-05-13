@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import validation from "./validation";
+import StoreData from "./storeData";
+import CreateUser from "./createUser";
 
 const useForm = (submitForm) => {
   const [errors, setErrors] = useState({});
@@ -18,10 +20,18 @@ const useForm = (submitForm) => {
     });
   };
 
-  const handleFormSubmit = (event) => {
+  const handleSignIn = (event) => {
     event.preventDefault();
     setErrors(validation(values));
     setDataIsCorrect(true);
+    StoreData(values);
+  };
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    setErrors(validation(values));
+    setDataIsCorrect(true);
+    CreateUser(values);
   };
 
   useEffect(() => {
@@ -30,7 +40,7 @@ const useForm = (submitForm) => {
     }
   }, [errors]);
 
-  return {handleChange, handleFormSubmit, errors, values}
+  return { handleChange, handleSignIn, handleSignUp, errors, values };
 };
 
 export default useForm;

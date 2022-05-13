@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import validation from "./validation";
 import useForm from "./useForm";
-
-const SignupForm = ({ submitForm }) => {
-  const { handleChange, handleFormSubmit, values, errors } =
+const SignupForm = ({ submitForm, setFormValues }) => {
+  const { handleChange, handleSignIn, handleSignUp, values, errors } =
     useForm(submitForm);
-
+  setFormValues(values);
   return (
     <div id="SignupForm">
       <h2> Create Account </h2>
@@ -42,9 +41,12 @@ const SignupForm = ({ submitForm }) => {
           />
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
-        <div id="signupButton">
-          <button type="submit" onClick={handleFormSubmit}>
-            Sign up
+        <div id="signInButton">
+          <button type="submit" onClick={handleSignIn}>
+            Sign In
+          </button>
+          <button type="submit" onClick={handleSignUp}>
+            Sign Up
           </button>
         </div>
       </form>
