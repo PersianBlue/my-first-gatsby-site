@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout/layout";
 
 let link1 = "https://fullstackopen.com/";
 let link2 = "https://www.gatsbyjs.com/docs/tutorial/part-2/";
@@ -19,6 +19,7 @@ let link12 = "https://github.com/cloudcommunity/Free-Certifications";
 let link13 = "https://twitter.com/catalinmpit/status/1519303615608934401";
 let link14 = "https://www.freecodecamp.org/learn/responsive-web-design/";
 let link15 = "https://www.easeout.co/blog/2021-01-19-understanding-events/";
+let link16 = "https://www.youtube.com/watch?v=lW7DWV2jST0";
 
 const links = [
   { id: 0, link: link1, name: "Full Stack Open Tutorial" },
@@ -36,6 +37,7 @@ const links = [
   { id: 12, link: link13, name: "Github interview prep repos" },
   { id: 13, link: link14, name: "Responsive web design - freeCodeCamp" },
   { id: 14, link: link15, name: "Events in JavaScript" },
+  { id: 15, link: link16, name: "Cloud Firestore Data Modeling" },
 ];
 const displayElement = (element) => (
   <ul key={element.id}>

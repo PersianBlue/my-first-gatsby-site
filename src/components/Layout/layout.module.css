@@ -27,8 +27,8 @@
 
   }
   .nav-link-text:hover{
-    box-shadow: 1px 1px 3px 1.5px yellow;
-    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1.5px yellow;
+    border-radius: 10px;
 
   }
 

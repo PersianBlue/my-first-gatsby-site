@@ -14,7 +14,7 @@ const CreateUser = (values) => {
       const name = user.displayName;
       const email = user.email;
       console.log("User Created Successfully!");
-      return <SignupFormSuccess name={name} email={email} />;
+      //return <SignupFormSuccess name={name} email={email} />;
     })
     .catch((error) => {
       const errorCode = error.code;

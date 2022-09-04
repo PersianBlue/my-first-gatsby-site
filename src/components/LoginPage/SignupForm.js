@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import validation from "./validation";
 import useForm from "./useForm";
+import Button from "../Button/Button";
+import signInWithGoogle from "./signInWithGoogle";
+
 const SignupForm = ({ submitForm, setFormValues }) => {
-  const { handleChange, handleSignIn, handleSignUp, values, errors } =
-    useForm(submitForm);
+  const {
+    handleChange,
+    handleSignIn,
+    handleSignUp,
+    values,
+    errors,
+    GoogleSignIn,
+  } = useForm(submitForm);
+
   setFormValues(values);
+
   return (
     <div id="SignupForm">
       <h2> Create Account </h2>
@@ -45,9 +56,20 @@ const SignupForm = ({ submitForm, setFormValues }) => {
           <button type="submit" onClick={handleSignIn}>
             Sign In
           </button>
+        </div>
+        <div id="signOutButton">
           <button type="submit" onClick={handleSignUp}>
             Sign Up
           </button>
+        </div>
+        <div id="signInWithGoogle">
+          <Button
+            id="GoogleSignInButton"
+            color="green"
+            textColor="black"
+            onClick={GoogleSignIn}
+            text="Sign In With Google"
+          />
         </div>
       </form>
     </div>

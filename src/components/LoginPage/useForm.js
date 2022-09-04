@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import validation from "./validation";
 import StoreData from "./storeData";
 import CreateUser from "./createUser";
+import signInWithGoogle from "./signInWithGoogle";
 
 const useForm = (submitForm) => {
   const [errors, setErrors] = useState({});
@@ -34,13 +35,25 @@ const useForm = (submitForm) => {
     CreateUser(values);
   };
 
+  const GoogleSignIn = () => {
+    signInWithGoogle();
+    setDataIsCorrect(true);
+  };
+
   useEffect(() => {
     if (Object.keys(errors).length === 0 && dataIsCorrect) {
       submitForm(true);
     }
   }, [errors]);
 
-  return { handleChange, handleSignIn, handleSignUp, errors, values };
+  return {
+    handleChange,
+    handleSignIn,
+    handleSignUp,
+    errors,
+    values,
+    GoogleSignIn,
+  };
 };
 
 export default useForm;
